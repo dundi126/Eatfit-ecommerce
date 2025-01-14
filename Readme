@@ -1,0 +1,129 @@
+# Eatfit
+
+Eatfit is a full-stack web application designed for managing fine-dining restaurant services. It includes a user-friendly **frontend**, an **admin panel**, and a robust **backend** to handle operations efficiently.
+
+---
+
+## Project Structure
+
+### **1. Frontend**
+
+Located in the `frontend` folder:
+
+- **Tech Stack**: [Vite.js](https://vitejs.dev/), [Tailwind CSS](https://tailwindcss.com/).
+- **Key Files/Folders**:
+  - `index.html`: Main entry point for the user interface.
+  - `vite.config.js`: Configuration for Vite.js.
+  - `tailwind.config.js`: Configuration for Tailwind CSS.
+  - `src`: Contains React components, pages, and assets.
+  - `.env`: Environment variables for API integration.
+
+### **2. Admin Panel**
+
+Located in the `admin` folder:
+
+- **Tech Stack**: [Vite.js](https://vitejs.dev/), [Tailwind CSS](https://tailwindcss.com/).
+- **Key Files/Folders**:
+  - `index.html`: Main entry point for the admin interface.
+  - Configuration and dependencies are similar to the frontend.
+
+### **3. Backend**
+
+Located in the `backend` folder:
+
+- **Tech Stack**: Node.js, Express.js.
+- **Key Files/Folders**:
+  - `server.js`: Entry point for the backend server.
+  - `routes`: Defines API endpoints.
+  - `controllers`: Contains logic for API routes.
+  - `models`: Defines database schemas.
+  - `tests`: Contains test cases for the backend.
+  - `vercel.json`: Configuration file for deploying to Vercel.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- npm (comes with Node.js) or Yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/eatfit.git
+   cd eatfit
+   ```
+
+2. Install dependencies for each folder:
+   - **Frontend**:
+     ```bash
+     cd frontend
+     npm install
+     ```
+   - **Admin**:
+     ```bash
+     cd ../admin
+     npm install
+     ```
+   - **Backend**:
+     ```bash
+     cd ../backend
+     npm install
+     ```
+
+### Environment Configuration
+
+1. Update the `.env` file in the `backend` folder with the following:
+
+   - **MongoDB**: Connection string for the MongoDB database.
+   - **Cloudinary**: Credentials for uploading and managing images.
+   - **Payment Gateway**: Provide API keys for Stripe or Razorpay, depending on the payment provider you use.
+
+   Example:
+
+   ```env
+   MONGO_URI=your-mongodb-connection-string
+   CLOUDINARY_URL=your-cloudinary-url
+   STRIPE_API_KEY=your-stripe-api-key
+   RAZORPAY_API_KEY=your-razorpay-api-key
+   ```
+
+### Running the Application
+
+- **Frontend**:
+
+  ```bash
+  cd frontend
+  npm run dev
+  ```
+
+  Access the frontend at [http://localhost:3000](http://localhost:3000).
+
+- **Admin**:
+
+  ```bash
+  cd admin
+  npm run dev
+  ```
+
+  Access the admin panel at [http://localhost:3001](http://localhost:3001).
+
+- **Backend**:
+  ```bash
+  cd backend
+  npm start
+  ```
+  Backend runs on [http://localhost:5000](http://localhost:5000).
+
+---
+
+## Deployment
+
+- Frontend and Admin: Can be deployed using [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
+- Backend: Configured for deployment on Vercel or other Node.js hosting platforms.
+
+---
